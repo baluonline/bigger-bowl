@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar :src="img" app clipped-left >
+  <v-app-bar  app clipped-left >
     <template v-slot:img="{ props }">
       <v-img v-bind="props" gradient="to top right, rgba(55,236,186,.7), rgba(25,32,72,.7)"></v-img>
     </template>
@@ -21,7 +21,8 @@ export default {
   name: "application-bar",
   data() {
     return {
-      logoImg: require("../assets/img/dog.jpg")
+      logoImg: require("../assets/img/dog.jpg"),
+      img: require("../assets/cards/living.jpeg")
     };
   },
   methods: {

@@ -1,6 +1,47 @@
 <template>
   <v-container fluid>
-    <v-row dense>
+    <v-row class="col-10 mx-10">
+      <v-card id="shopping-cards">
+        <v-img src="../assets/cards/living.jpeg" contain height="15em" width="15em" id="living-img"></v-img>
+        <v-card-title id="card-title">Living Room</v-card-title>
+      </v-card>
+      <v-card id="shopping-cards">
+        <v-img
+          src="../assets/cards/kitchen.jpeg"
+          contain
+          height="15em"
+          width="15em"
+          id="living-img"
+        ></v-img>
+        <v-card-title id="card-title">kitchen</v-card-title>
+      </v-card>
+
+      <v-card id="shopping-cards">
+        <v-img
+          src="../assets/cards/Sunroom.jpeg"
+          contain
+          height="15em"
+          width="15em"
+          id="living-img"
+        ></v-img>
+        <v-card-title id="card-title">Sun Room</v-card-title>
+      </v-card>
+        <v-card id="shopping-cards">
+        <v-img
+          src="../assets/cards/HomeOffice.jpg"
+          contain
+          height="15em"
+          width="15em"
+          id="living-img"
+        ></v-img>
+        <v-card-title id="card-title">Home Office</v-card-title>
+      </v-card>
+      <v-card id="shopping-cards">
+        <v-img src="../assets/cards/Bath.jpeg" contain height="15em" width="15em" id="living-img"></v-img>
+        <v-card-title id="card-title">Bath</v-card-title>
+      </v-card>
+    </v-row>
+    <!--    <v-row dense>
       <v-col v-for="card in cards" :key="card.title" :cols="card.flex">
         <v-card>
           <v-img
@@ -29,12 +70,13 @@
           </v-card-actions>
         </v-card>
       </v-col>
-    </v-row>
+    </v-row>-->
   </v-container>
 </template>
 <script>
 import { mapGetters } from "vuex";
 import routes from "../data/constants/routes";
+// import * as cardImages from "../assets/cards";
 
 export default {
   data() {
@@ -43,17 +85,17 @@ export default {
       cards: [
         {
           title: "Pre-fab homes",
-          src: "https://cdn.vuetifyjs.com/images/cards/house.jpg",
+          src: "../assets/cards/living.jpeg",
           flex: 12
         },
         {
           title: "Favorite road trips",
-          src: "https://cdn.vuetifyjs.com/images/cards/road.jpg",
+          src: "../assets/cards/living.jpeg",
           flex: 6
         },
         {
           title: "Best airlines",
-          src: "https://cdn.vuetifyjs.com/images/cards/plane.jpg",
+          src: "../assets/cards/living.jpeg",
           flex: 6
         }
       ]
@@ -63,15 +105,15 @@ export default {
     ...mapGetters(["headers", "items", "search", "sortedBy"])
   },
   created() {
-    this.fetchItems();
+    // this.fetchItems();
   },
   methods: {
-    fetchItems() {
+    /*   fetchItems() {
       // fetch data  from API
       this.$store.dispatch("fetchItems").then(response => {
         response ? (this.loading = false) : (this.loading = true);
       });
-    },
+    }, */
     select(row) {
       // select row and redirect to certain page with row details
       this.$store.dispatch("updateSelectedItem", row);
@@ -89,7 +131,18 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+#shopping-cards {
+  margin: 1em;
+}
 .custom-data-table {
   cursor: pointer;
+}
+#living-img {
+  height: "100px";
+  width: "150px";
+}
+
+#card-title {
+  justify-content: center;
 }
 </style>
