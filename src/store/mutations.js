@@ -5,8 +5,8 @@ export default {
   setFilter (state, input) {
     state.search = input;
   },  
-  setItems (state, items) {
-    state.items = items
+  setShoppingCards (state, items=[]) {
+    state.shoppingCards = items
   },
   setSelectedItem (state, item) {
     state.selectedItem = item;

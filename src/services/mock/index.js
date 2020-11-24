@@ -1,4 +1,4 @@
-import items from '../../data/static/items' // import static data
+import shoppingCards from '../../data/static/cards' // import static data
 
 const fetch = (mockData, time = 0) => {
   return new Promise((resolve) => {
@@ -9,7 +9,8 @@ const fetch = (mockData, time = 0) => {
 }
 
 export default {
-  fetchItems () {
-    return fetch(items, 1000) // wait 1s before returning items
+  fetchCards () {
+    console.log(shoppingCards)
+    return fetch(shoppingCards, 1000) // wait 1s before returning items
   }
 }

@@ -1,0 +1,35 @@
+[{
+        "title": "Living Room",
+        "src": "..assets/img/living.jpeg",
+        "to": "living"
+    },
+    {
+        "title": "Kitchen",
+        "src": "../assets/cards/kitchen.jpeg",
+        "to": "kitchen"
+
+    },
+    {
+        "title": "Sun Room",
+        "src": "../assets/cards/Sunroom.jpeg",
+        "to": "sunRoom"
+
+    },
+    {
+        "title": "Home Office",
+        "src": "../assets/cards/HomeOffice.jpeg",
+        "to": "homeOffice"
+
+    },
+    {
+        "title": "Bath",
+        "src": "../assets/cards/Bath.jpeg",
+        "to": "bath"
+    },
+    {
+        "title": "Bed Room",
+        "src": "../assets/cards/BedRoom.jpeg",
+        "to": "bedRoom"
+    }
+
+]

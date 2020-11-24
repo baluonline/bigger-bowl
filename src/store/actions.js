@@ -1,11 +1,12 @@
 // import client from 'api-client'
+import client from "../services/mock"
 
 export default {
-  /* fetchItems ({commit}) {
+  fetchItems ({commit}) {
     return client
-      .fetchItems()
-      .then(items => commit('setItems', items))
-  }, */
+      .fetchCards()
+      .then(items => commit('setShoppingCards', items))
+  },
   hideNavigation({commit}) {
     commit('setDrawer');
   },

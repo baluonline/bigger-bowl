@@ -8,7 +8,7 @@ export default {
     { text: 'Age (months)', value: 'age' },
     { text: 'Friendly with other animals', value: 'friendly' },
   ],
-  items: [],
+  shoppingCards: [],
   search: '',
   selectedItem: [],
   sortedColumns: []
